@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Compile tests
         run: |
-        ls 
-        compile_tests.sh
+             ls 
+             compile_tests.sh
 
       - name: Ex01 tests
         run: ./ex01/isodd_test
