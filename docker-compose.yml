@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  cstest:
+    container_name: henriquemochida
+    image: henriquemochida
+    build: .
+    restart: "no"
+    stdin_open: false # docker run -i
