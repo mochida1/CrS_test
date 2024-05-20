@@ -5,6 +5,14 @@
 Dependencies: `build-essential libgtest-dev cmake`
 
 #### To compile and run all tests in your linux: `./run_native.sh`
+- You need to have gtest propperly installed:
+```sh
+cd /usr/src/gtest &&\
+cmake CMakeLists.txt &&\
+make &&\
+cd lib &&\
+cp *.a /usr/lib
+```
 - This will compile, run the tests and remove everytyhing automatically.
 
 #### To run all tests on a docker environment: `docker-compose up`
