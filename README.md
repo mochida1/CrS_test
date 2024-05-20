@@ -17,3 +17,5 @@ Dependencies: `build-essential libgtest-dev cmake`
 - [ex03: ./ex03](https://github.com/mochida1/CrS_test/tree/main/ex03)
 - [ex04: ./ex04/ex04.md](https://github.com/mochida1/CrS_test/blob/main/ex04/ex04.md)
 - [ex05: ./ex05/ex05.md](https://github.com/mochida1/CrS_test/tree/main/ex05/ex05.md)
+
+[![CrediteSuisse Unit Tests](https://github.com/mochida1/CrS_test/actions/workflows/unitTests.yml/badge.svg?branch=main&event=push)](https://github.com/mochida1/CrS_test/actions/workflows/unitTests.yml)
