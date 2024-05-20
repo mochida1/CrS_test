@@ -1,0 +1,24 @@
+name: CrediteSuisse Unit Tests
+on: push
+
+jobs:
+  build:
+    name: Build & Gtest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install gtest manually
+        run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+
+      - uses: actions/checkout@v4
+      - name: Compile tests
+        run: compile_tests.sh
+
+      - name: Ex01 tests
+        run: ./ex01/isodd_test
+
+      - name: Ex02 tests
+        run: ./ex02/fib_test
+
+      - name: Ex03 tests
+        run: ./ex03/pov_test
