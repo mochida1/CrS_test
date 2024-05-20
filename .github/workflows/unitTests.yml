@@ -8,16 +8,14 @@ jobs:
 
     steps:
       - name: Install dependencies
-        run: sudo apt-get install build-essential libgtest-dev
+        run: sudo apt-get install build-essential libgtest-dev cmake -y
 
       - name: Install gtest manually
-        run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+        run: sudo apt-get install libgtest-dev -y && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp lib/*.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
 
       - uses: actions/checkout@v4
       - name: Compile tests
-        run: |
-             ls 
-             compile_tests.sh
+        run: compile_tests.sh
 
       - name: Ex01 tests
         run: ./ex01/isodd_test
